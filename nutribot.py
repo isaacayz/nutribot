@@ -45,8 +45,30 @@ def classifier():
 """inputs=[
   "Confirm your email address",
   "hey i need u to send some $",
-]"""
+]
+spamlabels = []
+notspamlabels = []
+for a in response.classifications:
+  spamlabels.append(a.labels['Spam'])
+  notspamlabels.append(a.labels['Not spam'])
+"""
+#print(classifier())
 
+def summarize(filepath):
+  # Open a file for reading
+  try:
+      with open(filepath, 'r') as file:
+          # Read the entire file content
+          file_content = file.read()
+          response = co.summarize(
+             text=file_content
+          )
+      with open('./summary.txt', 'w') as summary:
+         summary.write(str(response.summary))
+         print("Summary has been successfully saved in the right file ")
+  except FileNotFoundError:
+      print("The file does not exist.")
+  except Exception as e:
+      print(f"An error occurred: {str(e)}")
 
-print(classifier())
-
+print(summarize('/Users/isaacige/Documents/Code/DS&ML/nutribot/story.txt'))
