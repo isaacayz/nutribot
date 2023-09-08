@@ -2,22 +2,41 @@ import requests
 import cohere
 import constant
 from cohere.responses.classify import Example
-from flask import Flask, render_template
+from flask import Flask, request, render_template
 
-"""The Generation Endpoint"""
-
+"""Instantiation Section"""
 key = constant.api_key
 co = cohere.Client(key)
+app = Flask(__name__)
 
+
+@app.route('/')
+def index():
+   return render_template('index.html')
+
+
+@app.route('/prompter', methods=['GET', 'POST'])
 def prompter():
-  prompt = input('Welcome to the nutrition bot. All tasks related to food and nutrition can be answered here. What would you like to ask?')
-  response = co.generate(
-    prompt=prompt,
-    num_generations=1,
-    max_tokens=40
-  )
-  print('\n You\'ve asked an interesting question. \n Please find your answer below \n')
-  print(response.generations[0].text)
+  if request.method == 'GET':
+     return render_template('prompter.html')
+  else:
+    prompt = request.form.get('prompt')
+    response = co.generate(
+      prompt=prompt,
+      num_generations=1,
+      max_tokens=40
+    )
+    print('\n You\'ve asked an interesting question. \n Please find your answer below \n')
+    print(response.generations[0].text)
+
+
+
+if __name__ == '__main__':
+   app.run(host='127.0.0.1')
+
+
+
+
 
 #prompter()
 
@@ -73,4 +92,4 @@ def summarize(filepath):
   except Exception as e:
       print(f"An error occurred: {str(e)}")
 
-print(summarize(""))
+#print(summarize(""))
