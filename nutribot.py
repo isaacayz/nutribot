@@ -2,6 +2,7 @@ import requests
 import cohere
 import constant
 from cohere.responses.classify import Example
+from flask import Flask, render_template
 
 """The Generation Endpoint"""
 
@@ -20,7 +21,7 @@ def prompter():
 
 #prompter()
 
-"""
+""""
   The Classification **Endpoint**
   examples=[
     Example("Dermatologists don't like her!", "Spam"),
@@ -72,4 +73,4 @@ def summarize(filepath):
   except Exception as e:
       print(f"An error occurred: {str(e)}")
 
-print(summarize("C:\\Users\\ayoba\Documents\Python Class\\nutribot\story.txt"))
+print(summarize(""))
