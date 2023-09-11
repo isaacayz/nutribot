@@ -2,42 +2,7 @@
     <head>
         <title>Nutribot</title>   
         <marquee><h1>This project is still a work in progress!!!</h1></marquee>
-        <style>
-        marquee{
-            padding-bottom: 0px;
-        }
-        body{
-            background-image:url(food_bg.png);
-            margin-top: 0px;
-            margin-left: 0px;
-            margin-right: 0px;
-        }
-        .column {
-            float: left;
-            width: 50%;
-        }
-        #title{
-            margin-top: 0px;
-            text-align: center;
-            background-color: #34CA2C;
-        }
-        #trial{
-            margin-top: 0px;
-            padding-top: 100px;
-            text-align: center;
-        }
-        button{
-            margin-left: 40%;
-            font-size: 20px;          
-        }
-        button:hover{
-            background-color: rgb(12, 145, 212);
-        }
-        h2,h3{            
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-        </style>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     </head>
     <body>
         <h1 id="title">WELCOME TO NUTRIBOT</h1>
@@ -55,7 +20,7 @@
             </div>
             <div class="column" style="background-color: #5DEF55; padding-bottom: 90px;  padding-top: 50px;">
                 <h1 id="trial">Try the Nutribot Free Trial Now</h1>
-                <a href='prompter.html'><button>Try It Now</button></a>
+                <a href='/prompter'><button>Try It Now</button></a>
             </div>
             </div>
         </div>
