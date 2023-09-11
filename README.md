@@ -1,0 +1,2 @@
+# Welcome to the future of personalized nutrition guidance with NutriBot! We are excited to introduce you to our innovative and cutting-edge robot designed to revolutionize the way you approach your dietary choices and overall well-being.
+## At NutriBot, our mission is simple yet profound: to empower you to make informed and healthy nutritional choices effortlessly. We believe that access to personalized and science-based nutrition advice should be readily available to everyone, and our robot is here to make that a reality.
