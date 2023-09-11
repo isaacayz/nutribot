@@ -26,8 +26,10 @@ def prompter():
       num_generations=1,
       max_tokens=40
     )
-    print('\n You\'ve asked an interesting question. \n Please find your answer below \n')
-    print(response.generations[0].text)
+    print('You\'ve asked an interesting question...')
+    generatedResponse = response.generations[0].text
+    return render_template('prompter.html', generatedResponse = generatedResponse)
+    
 
 
 
