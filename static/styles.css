@@ -6,7 +6,6 @@ body{
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
-    background-repeat: repeat;
 }
 .column {
     float: left;
@@ -39,5 +38,8 @@ form{
 }
 #search{
     padding-top: 50px;
+    text-align: center;
+}
+#filething{
     text-align: center;
 }

@@ -30,7 +30,28 @@ def prompter():
     generatedResponse = response.generations[0].text
     return render_template('prompter.html', generatedResponse = generatedResponse)
     
-
+@app.route('/summarizer', methods=['GET','POST'])
+def summarize():
+  # Open a file for reading
+  if request.method == 'GET':
+    return render_template('summarizer.html')
+  else:
+    try:
+        print('Im inside open')
+        filepath = request.form.get('unsummarized_file')
+        with open(filepath, 'r') as file:
+            # Read the entire file content
+            file_content = file.read()
+            response = co.summarize(
+              text=file_content
+            )
+        with open('./summary.txt', 'w') as summary:
+          summary.write(str(response.summary))
+          print("Summary has been successfully saved in the right file ")
+    except FileNotFoundError:
+        print("The file does not exist.")
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
 
 
 if __name__ == '__main__':
@@ -77,21 +98,21 @@ for a in response.classifications:
 
 #print(classifier())
 """
+
 def summarize(filepath):
-  # Open a file for reading
-  try:
-      with open(filepath, 'r') as file:
-          # Read the entire file content
-          file_content = file.read()
-          response = co.summarize(
-             text=file_content
-          )
-      with open('./summary.txt', 'w') as summary:
-         summary.write(str(response.summary))
-         print("Summary has been successfully saved in the right file ")
-  except FileNotFoundError:
-      print("The file does not exist.")
-  except Exception as e:
-      print(f"An error occurred: {str(e)}")
+    try:
+        with open(filepath, 'r') as file:
+            # Read the entire file content
+            file_content = file.read()
+            response = co.summarize(
+              text=file_content
+            )
+        with open('./summary.txt', 'w') as summary:
+          summary.write(str(response.summary))
+          print("Summary has been successfully saved in the right file ")
+    except FileNotFoundError:
+        print("The file does not exist.")
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
 
 #print(summarize(""))
