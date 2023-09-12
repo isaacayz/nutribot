@@ -37,7 +37,6 @@ def summarize():
     return render_template('summarizer.html')
   else:
     try:
-        print('Im inside open')
         filepath = request.form.get('unsummarized_file')
         with open(filepath, 'r') as file:
             # Read the entire file content
@@ -45,9 +44,11 @@ def summarize():
             response = co.summarize(
               text=file_content
             )
+            reply = str(response.summary)
         with open('./summary.txt', 'w') as summary:
-          summary.write(str(response.summary))
+          summary.write(reply)
           print("Summary has been successfully saved in the right file ")
+          return render_template('summarizer.html', reply=reply)
     except FileNotFoundError:
         print("The file does not exist.")
     except Exception as e:
