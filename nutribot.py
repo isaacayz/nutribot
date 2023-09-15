@@ -26,6 +26,7 @@ def prompter():
       num_generations=4,
       max_tokens=120,
       temperature=0.5
+      
     )
     print('You\'ve asked an interesting question...')
     generatedResponse = response.generations[0].text
