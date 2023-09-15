@@ -1,29 +1,36 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <title>Nutribot</title>   
-        <marquee><h1>This project is still a work in progress!!!</h1></marquee>
+        <title>Nutribot</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <a href="/"><img src="../static/Nutri-bot logo.png" alt="Nutribot logo"></a>
+        <hr>
+        <div class="heading">
+            <div class="home">Home</div>
+            <div class="services">Services</div>
+            <div class="blog">Blog</div>
+            <div class="contact">Contact Us</div>
+        </div>
     </head>
     <body>
-        <h1 id="title">WELCOME TO NUTRIBOT</h1>
-        <div class="row">
-            <div class="column">
-                <h3>
-                    Welcome to the future of personalized nutrition guidance with NutriBot! We are excited to introduce you to our innovative and cutting-edge robot designed to revolutionize the way you approach your dietary choices and overall well-being.
-                    <break />
-                    <break />
-                </h3>
-            <h2 style="text-align: center;">Our Mission</h2>
-            <h3>
-                At NutriBot, our mission is simple yet profound: to empower you to make informed and healthy nutritional choices effortlessly. We believe that access to personalized and science-based nutrition advice should be readily available to everyone, and our robot is here to make that a reality.
-            </h3>
-            </div>
-            <div class="column" style="background-color: #5DEF55; padding-bottom: 90px;  padding-top: 50px;">
-                <h1 id="trial">Try the Nutribot Free Trial Now</h1>
-                <a href='/prompter'><button>Try It Now</button></a>
-                <a href='/summarizer'><button>summarizer</button></a>
-            </div>
-            </div>
+        <div id="body">
+            <div class="row">
+                <div class="column">            
+                    <h1 id="title" style="text-align: center;">WELCOME TO NUTRIBOT</h1>
+                    <h3>
+                        Welcome to the future of personalized nutrition guidance with NutriBot! We are excited to introduce you to our innovative and cutting-edge robot designed to revolutionize the way you approach your dietary choices and overall well-being.
+                        <break />
+                        At NutriBot, our mission is simple yet profound: to empower you to make informed and healthy nutritional choices effortlessly. We believe that access to personalized and science-based nutrition advice should be readily available to everyone, and our robot is here to make that a reality.
+                    </h3>
+                    <h1 id="trial">
+                        Try the Nutribot Prompter and Summariser Free Trial Now
+                    </h1>
+                    <div id="buttoncontainer">
+                        <a href='/prompter'><button>Try Prompter</button></a>
+                        <a href='/summarizer'><button>Try Summariser</button></a>
+                    </div>
+                </div>
+            </div>    
         </div>
     </body>
 </html>

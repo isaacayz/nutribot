@@ -1,32 +1,67 @@
-marquee{
-    padding-bottom: 0px;
+img{
+    width: 320px;
+    height: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 body{
-    background-image:url(food_bg.png);
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+#body{
+    padding-left: 50px;
+    padding-right: 50px;    
+    background-image:url(bg.png);    
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height:1000px;
+}
+.body{   
+    background-image:url(bg.png);    
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height:1000px;
+}
+.content{
+    background:rgb(255, 255, 255, 0.5);
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-bottom: 15%;
+}
+p{
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 20px;
+    text-align: center;
+}
+#promptcolumn{
+    padding-top: 30px;
+    width: 100%;    
 }
 .column {
     float: left;
     width: 50%;
+    padding-bottom: 50px;
+    background: rgb(250, 250, 250, 0.5);
 }
 #title{
-    margin-top: 0px;
-    text-align: center;
-    background-color: #34CA2C;
+    text-align: left;
 }
 #trial{
     margin-top: 0px;
-    padding-top: 100px;
+    padding-top: 50px;
     text-align: center;
 }
 button{
-    margin-left: 40%;
-    font-size: 20px;          
+    text-align: center;
+    font-size: 20px;
+    float: center;
 }
 button:hover{
-    background-color: rgb(12, 145, 212);
+    background-color: rgb(1, 83, 28);
 }
 h2,h3{            
     margin-left: 10px;
@@ -42,4 +77,57 @@ form{
 }
 #filething{
     text-align: center;
+    font-size: medium;
+}
+.heading{
+    display: flex;
+    font-size: 25px;
+    justify-content: space-between;
+}
+hr{
+    width:auto;
+    margin-left: 70px;
+    margin-right: 70px;
+    color: grey;
+}
+.home,.services,.blog,.contact{
+    font-family:'Calibri';
+    font-weight: bold;
+    flex: 1;
+    padding: 5px;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.prompter,.summariser{
+    font-family:'Calibri';
+    font-weight: bold;
+    flex: 1;
+    padding-top: 25px;
+    padding-right: 15px;
+    text-align: right;
+    width: 50px;
+}
+.prompter{
+    padding-left: 55%;
+}
+.home:hover,.services:hover,.blog:hover,.contact:hover{
+    color: rgb(73, 197, 73);
+}
+.row{
+    padding-top: 70px;
+}
+#buttoncontainter{
+    position: relative;
+    width: 100%;
+}
+button{
+    position: relative;
+    left: 28%;
+    margin-right: 35px;
+    border:none;
+    border-radius: 10px;
+    background-color: rgb(39, 139, 12);
+    color: white;
+    padding: 5px;
 }
