@@ -5,8 +5,8 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
         <div class="heading">
             <a href="/"><img src="../static/Nutri-bot logo.png" alt="Nutribot logo"></a>
-            <div class="prompter">Prompter</div>
-            <div class="summariser">Summariser</div>
+            <div class="prompter" style="color: rgb(73, 197, 73);">Prompter</div>
+            <div class="summariser"><a href="/summarizer" id="summariser">Summariser</a></div>
         </div>
         <hr>
     </head>
@@ -18,7 +18,7 @@
                     <h2 id="search">Type in Your Search Below</h2>
                     <form action="" method="POST">
                         <input type="text" name="prompt" />
-                        <a href='/'><button>Search</button></a>
+                        <a href='/'><button  id="searchbutton">Search</button></a>
                     </form>
                     <p>
                         <span>You asked: {{prompt}} ? </span>
