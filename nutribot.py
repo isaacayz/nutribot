@@ -23,12 +23,14 @@ def prompter():
     prompt = request.form.get('prompt')
     response = co.generate(
       prompt=prompt,
-      num_generations=1,
-      max_tokens=40
+      num_generations=4,
+      max_tokens=120,
+      temperature=0.5
+      
     )
     print('You\'ve asked an interesting question...')
     generatedResponse = response.generations[0].text
-    return render_template('prompter.html', generatedResponse = generatedResponse)
+    return render_template('prompter.html', generatedResponse = generatedResponse, prompt=prompt)
     
 @app.route('/summarizer', methods=['GET','POST'])
 def summarize():
