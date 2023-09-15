@@ -55,12 +55,20 @@ p{
     padding-top: 50px;
     text-align: center;
 }
-button{
+.button{
     text-align: center;
     font-size: 20px;
-    float: center;
+    float: center;    
+    position: relative;
+    left: 28%;
+    margin-right: 35px;
+    border:none;
+    border-radius: 10px;
+    background-color: rgb(39, 139, 12);
+    color: white;
+    padding: 5px;
 }
-button:hover{
+.button:hover{
     background-color: rgb(1, 83, 28);
 }
 h2,h3{            
@@ -111,6 +119,13 @@ hr{
 .prompter{
     padding-left: 55%;
 }
+#summariser{
+    text-decoration: none;
+    color:black;
+}
+#summariser:hover{
+    color: rgb(73, 197, 73);
+}
 .home:hover,.services:hover,.blog:hover,.contact:hover{
     color: rgb(73, 197, 73);
 }
@@ -121,13 +136,14 @@ hr{
     position: relative;
     width: 100%;
 }
-button{
-    position: relative;
-    left: 28%;
-    margin-right: 35px;
-    border:none;
+input{
+    width: 60%;
+}
+#searchbutton{
     border-radius: 10px;
-    background-color: rgb(39, 139, 12);
-    color: white;
     padding: 5px;
+    border: none;
+    background-color: rgb(122, 122, 228);
+    color: rgb(0, 0, 0);
+    margin-left: 10px;
 }
