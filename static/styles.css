@@ -119,11 +119,11 @@ hr{
 .prompter{
     padding-left: 55%;
 }
-#summariser{
+#summariser,#prompter{
     text-decoration: none;
     color:black;
 }
-#summariser:hover{
+#summariser:hover,#prompter:hover{
     color: rgb(73, 197, 73);
 }
 .home:hover,.services:hover,.blog:hover,.contact:hover{
@@ -146,4 +146,11 @@ input{
     background-color: rgb(122, 122, 228);
     color: rgb(0, 0, 0);
     margin-left: 10px;
+}
+#choose{
+    text-align: center;
+}
+.form{
+    padding-left: 30px;
+    padding-right: 30px;
 }

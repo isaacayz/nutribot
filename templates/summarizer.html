@@ -2,21 +2,31 @@
 <html>
     <head>
         <title>Nutribot</title>
-        <a href="/"><img src="../static/Nutri-bot logo.png" alt="Nutribot logo"></a>
-        <h1><a id="link" href="/prompter" target="_self">Prompter</a></h1>
         <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <div class="heading">
+            <a href="/"><img src="../static/Nutri-bot logo.png" alt="Nutribot logo"></a>
+            <div class="prompter"><a href=/prompter  id="prompter">Prompter</a></div>
+            <div class="summariser" style="color: rgb(73, 197, 73);">Summariser</div>
+        </div>
+        <hr>
     </head>
-    <body>
-        <h1 id="title">WELCOME TO NUTRIBOT</h1>
-        <div id="filething">
-            <h2 id="choose">Choose File To Upload</h2>
-            <form action="" method="POST">
-                <input name="unsummarized_file" type="file" id="file">
-                <input type="submit">
-            </form>
-            <p>
-                {{reply}}
-            </p>
+    <body>        
+        <div class="column" id="promptcolumn">
+            <div class="body">
+                <div class="content">
+                    <h1 id="title" style="text-align: center; padding-top: 25px;">WELCOME TO NUTRIBOT</h1>
+                    <h2 id="choose">Choose File To Upload</h2>
+                    <div class="form">
+                        <form action="" method="POST">
+                            <input name="unsummarized_file" type="file" id="file">
+                            <input type="submit" id="filebutton">
+                        </form>
+                    </div>
+                    <p>
+                        {{reply}}
+                    </p>
+                </div>
+            </div>
         </div>
     </body>
 </html>
